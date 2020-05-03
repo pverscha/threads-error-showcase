@@ -31,10 +31,16 @@
 </template>
 
 <script>
+import Consumer from "../business/Consumer";
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted: function () {
+    const consumer = new Consumer();
+    consumer.test();
   }
 }
 </script>
